@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  api-crisisview:
+    image: rainder/api-crisisview:latest
+    container_name: api_app
+    restart: always
+    ports:
+      - "3002:3000"
+    networks:
+      - devops2
+
+    environment:
+      - NODE_ENV=production
+
+networks:
+  devops2:
+    external: true

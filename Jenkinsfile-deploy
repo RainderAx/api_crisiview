@@ -1,0 +1,23 @@
+pipeline {
+    agent any 
+
+    stages {
+        stage('Deploy Staging') {
+            steps {
+                script {
+                    
+                    sh "docker compose pull"
+                    
+
+                    sh "docker compose up -d --remove-orphans apiapi-crisisview"
+                }
+            }
+        }
+    }
+    
+    post {
+        success {
+            echo "Déploiement réussi sur l'environnement de Staging."
+        }
+    }
+}
