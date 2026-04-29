@@ -48,7 +48,7 @@ pipeline {
     post {
         success {
           
-            build job: 'Api_CrisisView_CI_CD', wait: false
+            build job: 'CrisisView-API-CD', wait: false
         }
     }
 }
