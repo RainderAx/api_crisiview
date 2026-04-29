@@ -9,7 +9,7 @@ pipeline {
                     sh "docker compose pull"
                     
 
-                    sh "docker compose up -d --remove-orphans apiapi-crisisview"
+                    sh "docker compose up -d --remove-orphans api-crisisview"
                 }
             }
         }
